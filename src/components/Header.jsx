@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header className='sticky top-0'>
       <nav className="flex justify-between items-center py-4 md:py-12 px-6 md:px-12 bg-white shadow-md md:shadow-none">
-        <div className="text-lg md:text-2xl font-bold"><Link to='/'>Sagar C Mannannavar</Link></div>
+        <div className="text-lg md:text-2xl font-bold"><Link to='/'>Prateek G Ballari</Link></div>
         <ul className="hidden md:flex space-x-8 text-lg">
           {links.map((link, index) => (
             <li key={index}>
