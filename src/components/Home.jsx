@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import ProfileImage from "./../assets/sagarcm.jpg";
+import ProfileImage from "./../assets/prateek.jpg";
 import { Link } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
@@ -35,14 +35,14 @@ const Home = () => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
             >
                 <div className="text-gray-600 text-xl md:text-2xl">Hello, I&apos;m</div>
-                <h1 className="text-3xl md:text-5xl font-bold text-gray-800">Sagar C Mannannavar</h1>
-                <div className="text-gray-600 text-lg md:text-xl">Final-year CSE undergraduate | BMSCE &apos;25</div>
-                <div className="text-gray-600 text-lg md:text-xl">Intern @HPE</div>
+                <h1 className="text-3xl md:text-5xl font-bold text-gray-800">Prateek G Ballari</h1>
+                <div className="text-gray-600 text-lg md:text-xl">Final-year ISE undergraduate | CMRIT &apos;26</div>
+                <div className="text-gray-600 text-lg md:text-xl">Student at CMRIT</div>
 
                 {/* Buttons */}
                 <div className="flex justify-center space-x-4">
                     <motion.a
-                        href="https://drive.google.com/file/d/1zrru6onNMamfZd1PQPLTfG7Cxqsmy0h5/view?usp=sharing"
+                        href="https://drive.google.com/file/d/140PM4IEA9-lnWOoebAJ1q1R5zIWj3Z5p/view?usp=drive_link"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-blue-600 text-white px-4 py-2 rounded shadow-md hover:bg-blue-700 transition"
@@ -60,10 +60,9 @@ const Home = () => {
 
                 {/* Social Icons */}
                 <div className="flex justify-center space-x-6 md:space-x-8 p-2">
-                    <SocialIcon href="https://www.linkedin.com/in/sagar-c-mannannavar-08a002251" icon={<FaLinkedin />} />
-                    <SocialIcon href="https://github.com/sagarcm13/" icon={<FaGithub />} />
-                    <SocialIcon href="https://leetcode.com/u/sagar_c_mannannavar/" icon={<SimpleIconsLeetcode  />} />
-                    <SocialIcon href="https://www.instagram.com/sagar_cm6/" icon={<FaInstagram />} />
+                    <SocialIcon href="https://www.linkedin.com/in/prateek-ballari-90436330b/" icon={<FaLinkedin />} />
+                    <SocialIcon href="https://github.com/prateekgb123" icon={<FaGithub />} />
+                    <SocialIcon href="https://leetcode.com/u/prateekgb123/" icon={<SimpleIconsLeetcode  />} />
                 </div>
             </motion.div>
         </motion.section>

@@ -4,7 +4,6 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
-import Experience from './components/Experience';
 import './App.css'; 
 import ScrollToTop from './components/ScrollToTop.jsx';
 
@@ -17,7 +16,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/experience" element={<Experience />} />
       </Routes>
       <Footer />
     </Router>

@@ -4,41 +4,23 @@ import { motion } from "framer-motion";
 const Projects = () => {
     const projects = [
         {
-            projectLink: "https://github.com/sagarcm13/MERN-E-Commerce",
-            projectTitle: "MERN E-Commerce",
-            techStack: "React.js, Node.js, Express.js, MongoDB",
-            description: "Developed a full-stack e-commerce platform using the MERN stack. Features include product browsing, cart management, user authentication, and an admin dashboard for order management.",
+            projectLink: "https://e-commerce-j29i.onrender.com",
+            projectTitle: "E-Commerce with AI Chatbot",
+            techStack: "HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, Lyro AI Agent (Chatbot), Razorpay (Payment Gateway)",
+            description: "Developed a fully functional e-commerce website featuring product listings, search and filter functionalities, shopping cart, user authentication (signup/login), and secure order placement. Integrated an intelligent AI-powered chatbot to assist users with product inquiries, order tracking, and support queries in real- time, improving user engagement and retention. Backend was built using Express.js and MongoDB for scalable performance, and Razorpay was used to enable seamless online payments.",
         },
         {
-            projectLink: "https://github.com/sagarcm13/Event-Ticketing-Platform",
-            projectTitle: "Event Ticketing Platform",
-            techStack: "React.js, Solidity, Hardhat, Sepolia Testnet",
-            description: "Built a blockchain-based event ticketing system, enabling secure and transparent ticket sales. Integrated smart contracts to prevent fraud and ensure fair transactions.",
+            projectLink: "https://food-recipe-apibased.onrender.com",
+            projectTitle: "Food Recipe Finder – API-Based Web Application",
+            techStack: "HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, and a third-party Recipe API (Spoonacular).",
+            description: ": Developed a responsive and interactive food recipe web application that leverages a third-party API to fetch and display recipes based on user input. The platform allows users to search for food recipes by ingredients, meal type, or dietary preferences. It features a modern frontend design, real-time search suggestions, and dynamic rendering of recipe results.",
         },
         {
-            projectLink: "https://github.com/sagarcm13/Flutter-Attendence-App",
-            projectTitle: "Attendity - Attendance Management App",
-            techStack: "Flutter, Firebase, Cloud Firestore, Firebase Auth",
-            description: "Designed an intuitive mobile app for automated attendance tracking. Features one-click attendance marking and real-time synchronization with Firebase Firestore.",
-        },
-        {
-            projectLink: "https://github.com/sagarcm13/CIE-Marks-Portal",
-            projectTitle: "CIE - Marks Portal",
-            techStack: "React.js, Chakra-UI, Node.js, PostgreSQL",
-            description: "Developed a web-based system for tracking student marks, eliminating manual record-keeping. Optimized for efficient data entry and retrieval.",
-        },
-        {
-            projectLink: "",
-            projectTitle: "WebWatch - Website Monitoring App",
-            techStack: "Java Spring Boot, Java Scheduler, MongoDB Time Series",
-            description: "Engineered a real-time website monitoring tool with a 20% improvement in efficiency. Implemented automated scheduling and time-series data storage for scalable monitoring.",
-        },
-        {
-            projectLink: "https://github.com/sagarcm13/Tridala",
-            projectTitle: "Tridala Insights",
-            techStack: "React, Vercel",
-            description: "Developed a sleek, responsive single-page application for Tridala pharmaceutical using React. Built reusable components for scalability, optimized performance, and deployed seamlessly on Vercel. Ensured an intuitive and smooth user experience across all devices.",
-        },
+            projectLink: "https://ai-intgrated-mock-interview-frontend.onrender.com",
+            projectTitle: "AI Integrated Mock Interview Platform",
+            techStack: ": MERN Stack, Google Gemini Pro API (for AI feedback)",
+            description: "Developed a full-stack AI-powered mock interview platform that simulates real-world interview experiences through dynamic question generation, real-time evaluation, and insightful feedback. The platform allows users to record interview sessions, receive AI-driven analysis on responses, and track their progress over time. Designed with a clean and intuitive UI for both desktop and mobile users, the system enhances interview preparation through intelligent automation and personalized learning.",
+        }
     ];
 
     return (
@@ -46,13 +28,13 @@ const Projects = () => {
             className="p-8 bg-gray-50 min-h-screen"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }} // Faster fade-in
+            transition={{ duration: 0.4 }} 
         >
             <motion.h2 
                 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center"
                 initial={{ y: -15, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.3, ease: "easeOut" }} // Faster title animation
+                transition={{ duration: 0.3, ease: "easeOut" }} 
             >
                 Projects
             </motion.h2>

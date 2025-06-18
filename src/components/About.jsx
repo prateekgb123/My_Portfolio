@@ -3,11 +3,11 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
 
 const About = () => {
   const skills = [
-    "Proficient in C, Java, JavaScript",
-    "React, Node.js, Express.js, Spring Boot",
-    "Microsoft Azure (VMs), AWS (EC2)",
-    "MongoDB, PostgreSQL, Cloud Firestore, Neo4J",
-    "Blockchain & Smart Contracts",
+    "Proficient in Java, C, JavaScript",
+    "React, Node.js, Express.js, MongoDB",
+    "HTML, CSS, Tailwind CSS",
+    "API Integration, AI Integration",
+    "Version Control (Git)",
     "Problem-Solving & Analytical Skills",
   ];
 
@@ -38,7 +38,7 @@ const About = () => {
         >
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">Introduction</h3>
           <p className="text-lg text-gray-600 leading-relaxed">
-            I am a final-year Computer Science student at BMS College of Engineering, Bengaluru.
+            I am a final-year Information Science student at CMRIT College of Engineering, Bengaluru.
             Passionate about software development, I am eager to apply my knowledge, enhance my
             technical skills, and contribute to innovative and efficient solutions within a
             collaborative team.
@@ -57,32 +57,32 @@ const About = () => {
           <ul className="text-lg text-gray-600 space-y-3">
             <li className="flex items-center space-x-3">
               <FaEnvelope className="text-blue-600" />
-              <span>sagarcm13@gmail.com</span>
+              <span>prateekgb2004@gmail.com</span>
             </li>
             <li className="flex items-center space-x-3">
               <FaPhone className="text-blue-600" />
-              <span>+91 83103 71912</span>
+              <span>+91 88614 37069</span>
             </li>
             <li className="flex items-center space-x-3">
               <FaLinkedin className="text-blue-600" />
               <a
-                href="https://www.linkedin.com/in/sagar-c-mannannavar-08a002251"
+                href="https://www.linkedin.com/in/prateek-ballari-90436330b/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
               >
-                linkedin.com/in/sagarcm
+                linkedin.com/in/prateek-ballari-90436330b
               </a>
             </li>
             <li className="flex items-center space-x-3">
               <FaGithub className="text-black" />
               <a
-                href="https://github.com/sagarcm13"
+                href="https://github.com/prateekgb123"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
               >
-                github.com/sagarcm13
+                github.com/prateekgb123
               </a>
             </li>
           </ul>
