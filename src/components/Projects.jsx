@@ -18,9 +18,33 @@ const Projects = () => {
         {
             projectLink: "https://ai-intgrated-mock-interview-frontend.onrender.com",
             projectTitle: "AI Integrated Mock Interview Platform",
-            techStack: ": MERN Stack, Google Gemini Pro API (for AI feedback)",
+            techStack:  "MERN Stack, Google Gemini Pro API (for AI feedback)",
             description: "Developed a full-stack AI-powered mock interview platform that simulates real-world interview experiences through dynamic question generation, real-time evaluation, and insightful feedback. The platform allows users to record interview sessions, receive AI-driven analysis on responses, and track their progress over time. Designed with a clean and intuitive UI for both desktop and mobile users, the system enhances interview preparation through intelligent automation and personalized learning.",
-        }
+        },
+        {
+            projectLink: "https://github.com/prateekgb123/Food-Quality-Website.git",
+            projectTitle: "Food Quality Website",
+            techStack:  "HTML, CSS, JavaScript, Node.js, Express.js, MongoDB",
+            description: "Developed a responsive and interactive food quality website that provides users with information about food safety, quality standards, and best practices. The platform features a user-friendly interface related to food quality. The backend is built using Node.js and Express.js, with MongoDB for data storage, ensuring efficient content management.",
+        },
+        {
+            projectLink: "https://github.com/prateekgb123/facebookclone_tailwindcss.git",
+            projectTitle: "Facebook Clone",
+            techStack: "HTML, TailWind CSS, JavaScript",
+            description: " Developed a responsive Facebook clone using HTML, Tailwind CSS, and JavaScript. The project replicates the core features of Facebook, including user profiles, news feed, and post interactions. The design is fully responsive, ensuring optimal viewing on both desktop and mobile devices. The use of Tailwind CSS allows for rapid styling and customization, resulting in a modern and visually appealing user interface.",
+        },
+        {
+            projectLink: "https://github.com/prateekgb123/customer_churn_Prediction.git",
+            projectTitle: "Customer Churn Prediction",
+            techStack: "Python, Pandas, Scikit-learn, Matplotlib",
+            description: "Developed a customer churn prediction model using Python and machine learning libraries such as Pandas, Scikit-learn, and Matplotlib. The project involved data preprocessing, feature engineering, and model training to predict customer churn based on historical data. Visualizations were created to analyze trends and patterns in customer behavior, providing insights for retention strategies.",
+        },
+        {
+            projectLink: "https://github.com/prateekgb123/github-clone.git",
+            projectTitle: "GitHub Clone",
+            techStack: "HTML, CSS, JavaScript",
+            description: "Developed a GitHub clone using HTML, CSS, and JavaScript. The project replicates the core functionalities of GitHub, including user profiles, repositories, and commit history. The design is fully responsive, ensuring optimal viewing on both desktop and mobile devices. The use of modern web technologies allows for a clean and intuitive user interface, enhancing the overall user experience."
+        },
     ];
 
     return (

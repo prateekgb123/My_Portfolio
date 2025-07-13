@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import ProfileImage from "./../assets/prateek2.jpg";
 import { Link } from "react-router-dom";
@@ -42,7 +41,7 @@ const Home = () => {
                 {/* Buttons */}
                 <div className="flex justify-center space-x-4">
                     <motion.a
-                        href="https://drive.google.com/file/d/140PM4IEA9-lnWOoebAJ1q1R5zIWj3Z5p/view?usp=drive_link"
+                        href="https://drive.google.com/file/d/1M2uY1dGArWLip8vL-SEynaG-UpRW9xOH/view?usp=drive_link"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-blue-600 text-white px-4 py-2 rounded shadow-md hover:bg-blue-700 transition"
