@@ -10,7 +10,7 @@ const Projects = () => {
             description: "Developed a fully functional e-commerce website featuring product listings, search and filter functionalities, shopping cart, user authentication (signup/login), and secure order placement. Integrated an intelligent AI-powered chatbot to assist users with product inquiries, order tracking, and support queries in real- time, improving user engagement and retention. Backend was built using Express.js and MongoDB for scalable performance, and Razorpay was used to enable seamless online payments.",
         },
         {
-            projectLink: "https://food-recipe-apibased.onrender.com",
+            projectLink: "https://food-recipe-apibased-frontend.onrender.com",
             projectTitle: "Food Recipe Finder – API-Based Web Application",
             techStack: "HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, and a third-party Recipe API (Spoonacular).",
             description: ": Developed a responsive and interactive food recipe web application that leverages a third-party API to fetch and display recipes based on user input. The platform allows users to search for food recipes by ingredients, meal type, or dietary preferences. It features a modern frontend design, real-time search suggestions, and dynamic rendering of recipe results.",
