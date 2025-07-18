@@ -12,7 +12,7 @@ const Projects = () => {
         {
             projectLink: "https://food-recipe-apibased-frontend.onrender.com",
             projectTitle: "Food Recipe Finder – API-Based Web Application",
-            techStack: "HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, and a third-party Recipe API (Spoonacular).",
+            techStack: "MERN Stack, and a third-party Recipe API (Spoonacular).",
             description: ": Developed a responsive and interactive food recipe web application that leverages a third-party API to fetch and display recipes based on user input. The platform allows users to search for food recipes by ingredients, meal type, or dietary preferences. It features a modern frontend design, real-time search suggestions, and dynamic rendering of recipe results.",
         },
         {
