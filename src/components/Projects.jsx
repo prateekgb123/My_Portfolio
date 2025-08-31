@@ -16,7 +16,7 @@ const Projects = () => {
             description: ": Developed a responsive and interactive food recipe web application that leverages a third-party API to fetch and display recipes based on user input. The platform allows users to search for food recipes by ingredients, meal type, or dietary preferences. It features a modern frontend design, real-time search suggestions, and dynamic rendering of recipe results.",
         },
         {
-            projectLink: "https://ai-intgrated-mock-interview-frontend.onrender.com",
+            projectLink: "https://ai-intgrated-mock-interview-1.onrender.com",
             projectTitle: "AI Integrated Mock Interview Platform",
             techStack:  "MERN Stack, Google Gemini Pro API (for AI feedback)",
             description: "Developed a full-stack AI-powered mock interview platform that simulates real-world interview experiences through dynamic question generation, real-time evaluation, and insightful feedback. The platform allows users to record interview sessions, receive AI-driven analysis on responses, and track their progress over time. Designed with a clean and intuitive UI for both desktop and mobile users, the system enhances interview preparation through intelligent automation and personalized learning.",
