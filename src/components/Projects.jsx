@@ -16,7 +16,7 @@ const Projects = () => {
             description: ": Developed a responsive and interactive food recipe web application that leverages a third-party API to fetch and display recipes based on user input. The platform allows users to search for food recipes by ingredients, meal type, or dietary preferences. It features a modern frontend design, real-time search suggestions, and dynamic rendering of recipe results.",
         },
         {
-            projectLink: "https://ai-intgrated-mock-interview-1.onrender.com",
+            projectLink: "https://ai-intgrated-mock-interview-frontend.onrender.com",
             projectTitle: "AI Integrated Mock Interview Platform",
             techStack:  "MERN Stack, Google Gemini Pro API (for AI feedback)",
             description: "Developed a full-stack AI-powered mock interview platform that simulates real-world interview experiences through dynamic question generation, real-time evaluation, and insightful feedback. The platform allows users to record interview sessions, receive AI-driven analysis on responses, and track their progress over time. Designed with a clean and intuitive UI for both desktop and mobile users, the system enhances interview preparation through intelligent automation and personalized learning.",
@@ -45,6 +45,68 @@ const Projects = () => {
             techStack: "HTML, CSS, JavaScript",
             description: "Developed a GitHub clone using HTML, CSS, and JavaScript. The project replicates the core functionalities of GitHub, including user profiles, repositories, and commit history. The design is fully responsive, ensuring optimal viewing on both desktop and mobile devices. The use of modern web technologies allows for a clean and intuitive user interface, enhancing the overall user experience."
         },
+        {
+    projectLink: "https://github.com/prateekgb123/hr_management_system.git",
+    projectTitle: "HR Management System",
+    techStack: "React.js, Node.js, Express.js, MongoDB",
+    description: "Developed a comprehensive HR Management System to streamline employee management, attendance tracking, leave requests, payroll management, and department administration. Built a responsive interface with secure authentication and efficient backend APIs for managing HR operations."
+},
+
+{
+    projectLink: "https://tiktok-player-prateekgballari.onrender.com",
+    projectTitle: "TikTok Video Player",
+    techStack: "React.js, JavaScript, CSS",
+    description: "Developed a TikTok-inspired vertical video player featuring smooth scrolling, auto-play functionality, responsive design, and an engaging user experience. Implemented optimized video loading and intuitive navigation for seamless content consumption."
+},
+
+{
+    projectLink: "https://vb-construction-frontend.onrender.com",
+    projectTitle: "VB Construction Website",
+    techStack: "React.js, HTML, CSS, JavaScript",
+    description: "Designed and developed a modern responsive business website for a construction company showcasing services, completed projects, company profile, contact information, and inquiry forms with a professional user interface."
+},
+
+{
+    projectLink: "https://unix-aquatech-frontend.onrender.com",
+    projectTitle: "Unix Aquatech Website",
+    techStack: "React.js, HTML, CSS, JavaScript",
+    description: "Developed a responsive corporate website for Unix Aquatech to showcase water treatment solutions, company services, products, client information, and contact details with an intuitive and modern UI."
+},
+
+{
+    projectLink: "https://github.com/prateekgb123/WEATHER-APPLICATION.git",
+    projectTitle: "Weather Application",
+    techStack: "React.js, OpenWeather API, JavaScript, CSS",
+    description: "Built a weather forecasting application using the OpenWeather API that provides real-time weather conditions, temperature, humidity, wind speed, and multi-city search with a clean and responsive interface."
+},
+
+{
+    projectLink: "https://github.com/prateekgb123/PRODUCTIVITY-TRACKER-CHROME-EXTENSION.git",
+    projectTitle: "Productivity Tracker Chrome Extension",
+    techStack: "JavaScript, HTML, CSS, Chrome Extension API",
+    description: "Developed a Chrome extension to improve productivity by tracking browsing activity, managing daily tasks, and helping users stay focused through an intuitive browser-based interface."
+},
+
+{
+    projectLink: "https://github.com/prateekgb123/REAL-TIME-COLLABORATION-TOOL.git",
+    projectTitle: "Real-Time Collaboration Tool",
+    techStack: "React.js, Node.js, Socket.IO",
+    description: "Developed a real-time collaboration platform enabling multiple users to communicate and collaborate simultaneously using WebSocket technology. Implemented instant synchronization for an interactive collaborative experience."
+},
+
+{
+    projectLink: "https://github.com/prateekgb123/REAL-TIME-CHAT-APPLICATION.git",
+    projectTitle: "Real-Time Chat Application",
+    techStack: "React.js, Node.js, Express.js, Socket.IO",
+    description: "Built a real-time chat application supporting instant messaging, multiple users, live message updates, and responsive UI using Socket.IO for bidirectional communication."
+},
+
+{
+    projectLink: "https://social-activity-feed-qt3c.onrender.com",
+    projectTitle: "Social Activity Feed",
+    techStack: "React.js, Node.js, Express.js, MongoDB",
+    description: "Developed a social media platform where users can create accounts, share posts, interact with other users, like content, and engage through comments in a responsive and user-friendly interface."
+},
     ];
 
     return (

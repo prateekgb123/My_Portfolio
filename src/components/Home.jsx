@@ -33,15 +33,26 @@ const Home = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
             >
-                <div className="text-gray-600 text-xl md:text-2xl">Hello, I&apos;m</div>
-                <h1 className="text-3xl md:text-5xl font-bold text-gray-800">Prateek G Ballari</h1>
-                <div className="text-gray-600 text-lg md:text-xl">Final-year ISE undergraduate | CMRIT &apos;26</div>
-                <div className="text-gray-600 text-lg md:text-xl">Student at CMRIT</div>
+                        <div className="text-gray-600 text-xl md:text-2xl">
+            Hello, I&apos;m
+            </div>
+
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
+            Prateek G Ballari
+            </h1>
+
+            <div className="text-gray-600 text-lg md:text-xl">
+            Programmer Analyst at Cognizant
+            </div>
+
+            <div className="text-gray-600 text-lg md:text-xl">
+            MERN Stack Developer | AI Enthusiast
+            </div>
 
                 {/* Buttons */}
                 <div className="flex justify-center space-x-4">
                     <motion.a
-                        href="https://drive.google.com/file/d/1M2uY1dGArWLip8vL-SEynaG-UpRW9xOH/view?usp=drive_link"
+                        href="https://drive.google.com/file/d/1Kf84Of8pf0wqJlRnMQJzLXwuXPb_h7Rk/view?usp=drive_link"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-blue-600 text-white px-4 py-2 rounded shadow-md hover:bg-blue-700 transition"
