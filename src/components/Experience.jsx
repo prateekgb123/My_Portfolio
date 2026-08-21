@@ -5,11 +5,29 @@ const Experience = () => {
     {
       title: "Programmer Analyst Trainee",
       company: "Cognizant Technology Solutions",
-      duration: "2026 – Present",
+      duration: "May 2026 – June 2026",
       description:
-        "Completed intensive training in IBM App Connect Enterprise (IBM ACE), focusing on enterprise application integration. Worked on developing and understanding integration flows, message routing, data transformation, and integrating applications using SOAP and REST Web Services. Gained practical exposure to enterprise integration concepts, debugging message flows, API integration, and industry-standard software development practices.",
+        "Completed intensive training in IBM App Connect Enterprise (IBM ACE), focusing on enterprise application integration. Developed and enhanced integration flows, message routing, data transformation, and application integration using SOAP and REST Web Services. Gained practical exposure to XML, JSON, ESQL, API integration, debugging message flows, and enterprise integration concepts.",
       techStack:
-        "IBM App Connect Enterprise (IBM ACE), SOAP Web Services, REST APIs, XML, JSON, ESQL, Java, Git",
+        "IBM App Connect Enterprise (IBM ACE), IBM MQ, SOAP Web Services, REST APIs, XML, JSON, ESQL, Java, Git",
+    },
+    {
+      title: "Full Stack Web Development Intern",
+      company: "Edutainer IT Solutions",
+      duration: "Jan 2026 – Apr 2026",
+      description:
+        "Built responsive full-stack web applications using React.js, Node.js, Express.js, and MongoDB. Developed RESTful APIs for frontend and backend communication, implemented authentication, CRUD operations, form handling, search, and filtering, and tested APIs using Postman. Used Git and GitHub for version control and maintained application code throughout the development lifecycle.",
+      techStack:
+        "React.js, Node.js, Express.js, MongoDB, REST APIs, JavaScript, HTML, CSS, Postman, Git, GitHub",
+    },
+    {
+      title: "MERN Stack Web Development Intern",
+      company: "CODTECH IT Solutions Pvt. Ltd.",
+      duration: "Dec 2025 – Apr 2026",
+      description:
+        "Developed multiple full-stack web applications using the MERN stack during the internship. Built a weather application with REST API integration, a real-time chat application, a real-time collaboration tool, and a productivity tracker extension. Focused on responsive user interfaces, API integration, backend development, and database management using MongoDB.",
+      techStack:
+        "MongoDB, Express.js, React.js, Node.js, REST APIs, JavaScript, HTML, CSS, Git",
     },
   ];
 
@@ -34,7 +52,7 @@ const Experience = () => {
         </p>
       </motion.div>
 
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto space-y-8">
         {experiences.map((experience, index) => (
           <motion.div
             key={index}

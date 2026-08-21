@@ -60,7 +60,7 @@ const Home = () => {
         {/* Buttons */}
         <div className="flex justify-center gap-4 pt-2 flex-wrap">
           <motion.a
-            href="https://drive.google.com/file/d/1Kf84Of8pf0wqJlRnMQJzLXwuXPb_h7Rk/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1QQcpSDTaPA4uRRrXVkw8su4cxu_S2Qv9/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
