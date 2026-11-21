@@ -1,156 +1,104 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useMemo, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+import { projects } from "../data/site";
+import { isLive, SiteMock } from "./ui";
+import CTABand from "./CTABand";
+
+const filters = ["All", "Business Websites", "E-commerce", "Web Apps & AI", "Other"];
 
 const Projects = () => {
-    const projects = [
-        {
-            projectLink: "https://e-commerce-j29i.onrender.com",
-            projectTitle: "E-Commerce with AI Chatbot",
-            techStack: "HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, Lyro AI Agent (Chatbot), Razorpay (Payment Gateway)",
-            description: "Developed a fully functional e-commerce website featuring product listings, search and filter functionalities, shopping cart, user authentication (signup/login), and secure order placement. Integrated an intelligent AI-powered chatbot to assist users with product inquiries, order tracking, and support queries in real- time, improving user engagement and retention. Backend was built using Express.js and MongoDB for scalable performance, and Razorpay was used to enable seamless online payments.",
-        },
-        {
-            projectLink: "https://food-recipe-apibased-frontend.onrender.com",
-            projectTitle: "Food Recipe Finder – API-Based Web Application",
-            techStack: "MERN Stack, and a third-party Recipe API (Spoonacular).",
-            description: ": Developed a responsive and interactive food recipe web application that leverages a third-party API to fetch and display recipes based on user input. The platform allows users to search for food recipes by ingredients, meal type, or dietary preferences. It features a modern frontend design, real-time search suggestions, and dynamic rendering of recipe results.",
-        },
-        {
-            projectLink: "https://ai-intgrated-mock-interview-frontend.onrender.com",
-            projectTitle: "AI Integrated Mock Interview Platform",
-            techStack:  "MERN Stack, Google Gemini Pro API (for AI feedback)",
-            description: "Developed a full-stack AI-powered mock interview platform that simulates real-world interview experiences through dynamic question generation, real-time evaluation, and insightful feedback. The platform allows users to record interview sessions, receive AI-driven analysis on responses, and track their progress over time. Designed with a clean and intuitive UI for both desktop and mobile users, the system enhances interview preparation through intelligent automation and personalized learning.",
-        },
-        {
-            projectLink: "https://github.com/prateekgb123/Food-Quality-Website.git",
-            projectTitle: "Food Quality Website",
-            techStack:  "HTML, CSS, JavaScript, Node.js, Express.js, MongoDB",
-            description: "Developed a responsive and interactive food quality website that provides users with information about food safety, quality standards, and best practices. The platform features a user-friendly interface related to food quality. The backend is built using Node.js and Express.js, with MongoDB for data storage, ensuring efficient content management.",
-        },
-        {
-            projectLink: "https://github.com/prateekgb123/facebookclone_tailwindcss.git",
-            projectTitle: "Facebook Clone",
-            techStack: "HTML, TailWind CSS, JavaScript",
-            description: " Developed a responsive Facebook clone using HTML, Tailwind CSS, and JavaScript. The project replicates the core features of Facebook, including user profiles, news feed, and post interactions. The design is fully responsive, ensuring optimal viewing on both desktop and mobile devices. The use of Tailwind CSS allows for rapid styling and customization, resulting in a modern and visually appealing user interface.",
-        },
-        {
-            projectLink: "https://github.com/prateekgb123/customer_churn_Prediction.git",
-            projectTitle: "Customer Churn Prediction",
-            techStack: "Python, Pandas, Scikit-learn, Matplotlib",
-            description: "Developed a customer churn prediction model using Python and machine learning libraries such as Pandas, Scikit-learn, and Matplotlib. The project involved data preprocessing, feature engineering, and model training to predict customer churn based on historical data. Visualizations were created to analyze trends and patterns in customer behavior, providing insights for retention strategies.",
-        },
-        {
-            projectLink: "https://github.com/prateekgb123/github-clone.git",
-            projectTitle: "GitHub Clone",
-            techStack: "HTML, CSS, JavaScript",
-            description: "Developed a GitHub clone using HTML, CSS, and JavaScript. The project replicates the core functionalities of GitHub, including user profiles, repositories, and commit history. The design is fully responsive, ensuring optimal viewing on both desktop and mobile devices. The use of modern web technologies allows for a clean and intuitive user interface, enhancing the overall user experience."
-        },
-        {
-    projectLink: "https://github.com/prateekgb123/hr_management_system.git",
-    projectTitle: "HR Management System",
-    techStack: "React.js, Node.js, Express.js, MongoDB",
-    description: "Developed a comprehensive HR Management System to streamline employee management, attendance tracking, leave requests, payroll management, and department administration. Built a responsive interface with secure authentication and efficient backend APIs for managing HR operations."
-},
+  const [active, setActive] = useState("All");
+  const list = useMemo(() => (active === "All" ? projects : projects.filter((p) => p.category === active)), [active]);
+  const liveCount = projects.filter((p) => isLive(p.link)).length;
 
-{
-    projectLink: "https://tiktok-player-prateekgballari.onrender.com",
-    projectTitle: "TikTok Video Player",
-    techStack: "React.js, JavaScript, CSS",
-    description: "Developed a TikTok-inspired vertical video player featuring smooth scrolling, auto-play functionality, responsive design, and an engaging user experience. Implemented optimized video loading and intuitive navigation for seamless content consumption."
-},
+  return (
+    <main>
+      <section className="relative overflow-hidden pb-10 pt-16 md:pt-24">
+        <div className="pointer-events-none absolute inset-0 bg-grid mask-fade-b" />
+        <div className="pointer-events-none absolute -top-40 left-1/2 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-accent/10 blur-[120px]" />
+        <div className="container-x relative">
+          <span className="eyebrow">Portfolio</span>
+          <h1 className="mt-4 max-w-3xl text-4xl font-extrabold leading-[1.05] sm:text-6xl">
+            Work I&apos;ve designed, built &amp; shipped
+          </h1>
+          <p className="mt-5 max-w-2xl text-lg text-zinc-400">
+            {projects.length} projects across business websites, e-commerce, real-time apps and AI — {liveCount} of them live
+            right now. Click any project to explore it.
+          </p>
 
-{
-    projectLink: "https://vb-construction-frontend.onrender.com",
-    projectTitle: "VB Construction Website",
-    techStack: "React.js, HTML, CSS, JavaScript",
-    description: "Designed and developed a modern responsive business website for a construction company showcasing services, completed projects, company profile, contact information, and inquiry forms with a professional user interface."
-},
+          <div className="mt-10 flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none]">
+            {filters.map((f) => (
+              <button
+                key={f}
+                onClick={() => setActive(f)}
+                className={`shrink-0 rounded-full px-5 py-2.5 text-sm font-semibold transition ${
+                  active === f ? "bg-accent text-ink-950" : "border border-white/10 text-zinc-300 hover:border-white/30 hover:text-white"
+                }`}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
 
-{
-    projectLink: "https://unix-aquatech-frontend.onrender.com",
-    projectTitle: "Unix Aquatech Website",
-    techStack: "React.js, HTML, CSS, JavaScript",
-    description: "Developed a responsive corporate website for Unix Aquatech to showcase water treatment solutions, company services, products, client information, and contact details with an intuitive and modern UI."
-},
-
-{
-    projectLink: "https://github.com/prateekgb123/WEATHER-APPLICATION.git",
-    projectTitle: "Weather Application",
-    techStack: "React.js, OpenWeather API, JavaScript, CSS",
-    description: "Built a weather forecasting application using the OpenWeather API that provides real-time weather conditions, temperature, humidity, wind speed, and multi-city search with a clean and responsive interface."
-},
-
-{
-    projectLink: "https://github.com/prateekgb123/PRODUCTIVITY-TRACKER-CHROME-EXTENSION.git",
-    projectTitle: "Productivity Tracker Chrome Extension",
-    techStack: "JavaScript, HTML, CSS, Chrome Extension API",
-    description: "Developed a Chrome extension to improve productivity by tracking browsing activity, managing daily tasks, and helping users stay focused through an intuitive browser-based interface."
-},
-
-{
-    projectLink: "https://github.com/prateekgb123/REAL-TIME-COLLABORATION-TOOL.git",
-    projectTitle: "Real-Time Collaboration Tool",
-    techStack: "React.js, Node.js, Socket.IO",
-    description: "Developed a real-time collaboration platform enabling multiple users to communicate and collaborate simultaneously using WebSocket technology. Implemented instant synchronization for an interactive collaborative experience."
-},
-
-{
-    projectLink: "https://github.com/prateekgb123/REAL-TIME-CHAT-APPLICATION.git",
-    projectTitle: "Real-Time Chat Application",
-    techStack: "React.js, Node.js, Express.js, Socket.IO",
-    description: "Built a real-time chat application supporting instant messaging, multiple users, live message updates, and responsive UI using Socket.IO for bidirectional communication."
-},
-
-{
-    projectLink: "https://social-activity-feed-qt3c.onrender.com",
-    projectTitle: "Social Activity Feed",
-    techStack: "React.js, Node.js, Express.js, MongoDB",
-    description: "Developed a social media platform where users can create accounts, share posts, interact with other users, like content, and engage through comments in a responsive and user-friendly interface."
-},
-    ];
-
-    return (
-        <motion.section 
-            className="p-8 bg-gray-50 min-h-screen"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }} 
-        >
-            <motion.h2 
-                className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center"
-                initial={{ y: -15, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.3, ease: "easeOut" }} 
-            >
-                Projects
-            </motion.h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {projects.map((project, index) => (
-                    <motion.div 
-                        key={index}
-                        className="bg-white p-6 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200"
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.3, delay: index * 0.05 }} // Faster card stagger effect
-                        whileHover={{ scale: 1.05 }} // Subtle hover effect
+      <section className="pb-8">
+        <motion.div layout className="container-x grid gap-5 sm:grid-cols-2 lg:grid-cols-3 [&>*]:min-w-0">
+          <AnimatePresence mode="popLayout">
+            {list.map((p) => (
+              <motion.a
+                layout
+                key={p.title}
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.3 }}
+                className="card group flex min-w-0 flex-col p-4 transition-colors hover:border-white/20"
+              >
+                <div className="transition-transform duration-500 group-hover:-translate-y-1">
+                  <SiteMock project={p} compact />
+                </div>
+                <div className="flex flex-1 flex-col px-2 pb-2 pt-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="text-lg font-bold leading-snug">{p.title}</h3>
+                      <p className="mt-0.5 text-sm text-zinc-500">{p.subtitle}</p>
+                    </div>
+                    <span
+                      className={`shrink-0 rounded-full px-2.5 py-1 text-[11px] font-bold ${
+                        isLive(p.link) ? "bg-accent/15 text-accent" : "bg-white/[0.06] text-zinc-400"
+                      }`}
                     >
-                        {project.projectLink ? (
-                            <Link to={project.projectLink} target="_blank" rel="noopener noreferrer">
-                                <h3 className="text-2xl font-semibold text-blue-700 mb-2 hover:underline">
-                                    {project.projectTitle}
-                                </h3>
-                            </Link>
-                        ) : (
-                            <h3 className="text-2xl font-semibold text-gray-800 mb-2">{project.projectTitle}</h3>
-                        )}
-                        <h5 className="text-lg font-medium text-gray-600 mb-2">{project.techStack}</h5>
-                        <p className="text-gray-700 leading-relaxed">{project.description}</p>
-                    </motion.div>
-                ))}
-            </div>
-        </motion.section>
-    );
+                      {isLive(p.link) ? "● LIVE" : "CODE"}
+                    </span>
+                  </div>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">{p.desc}</p>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {p.tech.map((t) => (
+                      <span key={t} className="chip !text-[11px]">{t}</span>
+                    ))}
+                  </div>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:text-accent">
+                    {isLive(p.link) ? (
+                      <>Visit site <FiArrowUpRight /></>
+                    ) : (
+                      <><FiGithub /> View code</>
+                    )}
+                  </span>
+                </div>
+              </motion.a>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </section>
+
+      <CTABand />
+    </main>
+  );
 };
 
 export default Projects;

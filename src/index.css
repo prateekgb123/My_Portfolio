@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+  }
+  body {
+    @apply bg-ink-900 text-zinc-300 font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-accent text-ink-950;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display text-white tracking-tight;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 font-semibold text-ink-950 transition-all duration-300 hover:bg-accent-soft hover:shadow-[0_0_40px_-8px_rgba(198,243,94,0.7)] active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition-all duration-300 hover:border-white/40 hover:bg-white/5 active:scale-[0.98];
+  }
+  .card {
+    @apply rounded-3xl border border-white/[0.07] bg-ink-850;
+  }
+  .chip {
+    @apply rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs font-medium text-zinc-300;
+  }
+  .input {
+    @apply w-full rounded-xl border border-white/10 bg-ink-900 px-4 py-3 text-white placeholder-zinc-500 outline-none transition focus:border-accent/60 focus:ring-2 focus:ring-accent/20;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 40%, transparent);
+  }
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent via-accent-soft to-white bg-clip-text text-transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee, .animate-float, .animate-float-slow, .animate-wa-shake, .animate-wa-glow { animation: none; }
+}
