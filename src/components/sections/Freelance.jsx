@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 import { services, whatsappLink } from "../../data/site";
@@ -16,14 +15,14 @@ const Freelance = () => (
             <div>
               <span className="eyebrow">Freelance</span>
               <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">Need a website for your business?</h2>
-              <p className="mt-4 leading-relaxed text-zinc-400">
+              <p className="mt-4 leading-relaxed text-muted-400">
                 Alongside my full-time work, I build websites and web apps for clients — designed around your requirements,
-                built end to end and deployed live. Royal Infra, VB Construction and Unix Aquatech are a few I&apos;ve delivered.
+                built end to end and deployed live. Royal Infra, Wander Realtors, VB Construction and Unix Aquatech are a few I&apos;ve delivered.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link to="/#contact" className="btn-primary group">
+                <a href="#contact" className="btn-primary group">
                   Discuss your project <FiArrowRight className="transition-transform group-hover:translate-x-1" />
-                </Link>
+                </a>
                 <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-ghost">
                   <FaWhatsapp className="text-[#25D366]" /> WhatsApp
                 </a>
@@ -32,13 +31,13 @@ const Freelance = () => (
 
             <ul className="grid gap-3 sm:grid-cols-2">
               {services.map((s) => (
-                <li key={s.title} className="flex items-start gap-3 rounded-2xl border border-white/[0.07] bg-ink-900/60 p-4">
+                <li key={s.title} className="flex items-start gap-3 rounded-2xl border border-fg/[0.07] bg-ink-900/60 p-4">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-accent/10 text-accent">
                     <ServiceIcon name={s.icon} />
                   </span>
                   <span>
-                    <span className="block font-semibold text-white">{s.title}</span>
-                    <span className="mt-0.5 block text-sm leading-snug text-zinc-500">{s.short}</span>
+                    <span className="block font-semibold text-fg">{s.title}</span>
+                    <span className="mt-0.5 block text-sm leading-snug text-muted-500">{s.short}</span>
                   </span>
                 </li>
               ))}

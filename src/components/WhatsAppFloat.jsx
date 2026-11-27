@@ -25,7 +25,7 @@ const WhatsAppFloat = () => (
       <FaWhatsapp className="relative h-full w-full text-white" />
     </span>
 
-    <span className="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 translate-x-2 whitespace-nowrap rounded-full border border-white/10 bg-ink-850 px-4 py-2 text-sm font-semibold text-white opacity-0 shadow-lg transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block">
+    <span className="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 translate-x-2 whitespace-nowrap rounded-full border border-fg/10 bg-ink-850 px-4 py-2 text-sm font-semibold text-fg opacity-0 shadow-lg transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block">
       Chat on WhatsApp
     </span>
   </a>

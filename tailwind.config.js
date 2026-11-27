@@ -4,18 +4,27 @@ export default {
   theme: {
     extend: {
       colors: {
+        // "ink" = surfaces (light sky whites). Names kept so existing classes still read as layers.
         ink: {
-          950: "#07080B",
-          900: "#0B0D12",
-          850: "#0F1218",
-          800: "#141821",
-          700: "#1D222D",
-          600: "#2A303D",
+          950: "#FFFFFF",
+          900: "#F2F7FF",
+          850: "#FAFCFF",
+          800: "#EDF4FE",
+          700: "#DFEAF8",
+          600: "#C9D8EE",
+        },
+        // foreground + muted text come from CSS variables so a section can flip them (see .on-sky in index.css)
+        fg: "rgb(var(--fg) / <alpha-value>)",
+        muted: {
+          200: "rgb(var(--muted-200) / <alpha-value>)",
+          300: "rgb(var(--muted-300) / <alpha-value>)",
+          400: "rgb(var(--muted-400) / <alpha-value>)",
+          500: "rgb(var(--muted-500) / <alpha-value>)",
         },
         accent: {
-          DEFAULT: "#C6F35E",
-          soft: "#E3FBA8",
-          deep: "#9BCB2E",
+          DEFAULT: "#2F6FED",
+          soft: "#5B9BFF",
+          deep: "#1D4FC0",
         },
       },
       fontFamily: {
@@ -46,10 +55,14 @@ export default {
           "0%,100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        drift: {
+          "0%,100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(40px)" },
+        },
         pulseDot: {
-          "0%": { boxShadow: "0 0 0 0 rgba(198,243,94,0.6)" },
-          "70%": { boxShadow: "0 0 0 10px rgba(198,243,94,0)" },
-          "100%": { boxShadow: "0 0 0 0 rgba(198,243,94,0)" },
+          "0%": { boxShadow: "0 0 0 0 rgba(47,111,237,0.6)" },
+          "70%": { boxShadow: "0 0 0 10px rgba(47,111,237,0)" },
+          "100%": { boxShadow: "0 0 0 0 rgba(47,111,237,0)" },
         },
       },
       animation: {
@@ -58,6 +71,8 @@ export default {
         marquee: "marquee 35s linear infinite",
         float: "float 6s ease-in-out infinite",
         "float-slow": "float 8s ease-in-out infinite",
+        drift: "drift 30s ease-in-out infinite",
+        "drift-slow": "drift 45s ease-in-out infinite reverse",
         "pulse-dot": "pulseDot 2s infinite",
       },
     },

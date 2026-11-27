@@ -19,7 +19,7 @@ export const whatsappLink = (text = "Hi Prateek, I'd like to discuss a website p
 
 export const stats = [
   { value: "15+", label: "Projects built" },
-  { value: "7+", label: "Live websites & apps" },
+  { value: "10", label: "Live websites & apps" },
   { value: "3", label: "Industry internships" },
   { value: "100%", label: "Mobile responsive" },
 ];
@@ -75,9 +75,37 @@ export const services = [
 ];
 
 // kind: "business" | "shop" | "app" | "ai"  — controls the mock preview style.
-// category: used by the filter on the Work page.
+// Only live, deployed websites are listed here (code-only repos stay on GitHub).
+// category: used by the filter in the "All projects" grid.
+// client: set for work done for a company (shown under "Built for companies"); featured projects without it are personal.
 // image: optional screenshot path (e.g. import it or put it in /public) to replace the mock preview.
 export const projects = [
+  {
+    title: "Royal Infra",
+    subtitle: "Real-estate website for a Bengaluru property firm",
+    link: "https://royalinfra.net.in/",
+    category: "Business Websites",
+    kind: "business",
+    color: "#D4A537",
+    featured: true,
+    client: "Royal Infra · Real-estate company",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Zoho CRM", "Tailwind CSS"],
+    desc: "A live business website for Royal Infra, a unit of Royal Enterprises — showcasing new-launch properties across North Bangalore with prices and details, plus home loans, interior design and property services, with callback and WhatsApp enquiries.",
+    highlights: ["Featured property listings", "Services & 4-step buying process", "Callback & WhatsApp enquiries", "Leads managed in Zoho CRM"],
+  },
+  {
+    title: "Wander Realtors",
+    subtitle: "Property-advisory website for a Bengaluru realtor",
+    link: "https://wanderrealtors.com/",
+    category: "Business Websites",
+    kind: "business",
+    color: "#4D7A2C",
+    featured: true,
+    client: "Wander Realtors · Real-estate company",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Zoho CRM"],
+    desc: "A live website for Wander Realtors, a Bengaluru property advisory — curated new-launch projects across North Bangalore with prices and configurations, resale listings, plus home loans, interior design and allied property services, with a blog and Q&A.",
+    highlights: ["New-launch & resale listings", "Loans, interiors & property services", "Blog and Q&A sections", "Leads managed in Zoho CRM"],
+  },
   {
     title: "AI Finance Advisor",
     subtitle: "Personal finance dashboard with an AI advisor",
@@ -101,18 +129,6 @@ export const projects = [
     tech: ["MERN Stack", "Gemini API"],
     desc: "A full-stack platform that generates interview questions, records answers and gives AI-driven feedback so users can track their progress over time.",
     highlights: ["Gemini AI feedback", "Session recording", "Progress tracking"],
-  },
-  {
-    title: "Royal Infra",
-    subtitle: "Real-estate website for a Bengaluru property firm",
-    link: "https://royalinfra.net.in/",
-    category: "Business Websites",
-    kind: "business",
-    color: "#D4A537",
-    featured: true,
-    tech: ["React.js", "Vite", "Tailwind CSS", "Responsive Design"],
-    desc: "A live business website for Royal Infra, a unit of Royal Enterprises — showcasing new-launch properties across North Bangalore with prices and details, plus home loans, interior design and property services, with callback and WhatsApp enquiries.",
-    highlights: ["Featured property listings", "Services & 4-step buying process", "Callback & WhatsApp enquiries", "Live on a custom domain"],
   },
   {
     title: "E-Commerce Store",
@@ -178,99 +194,17 @@ export const projects = [
     tech: ["React.js", "JavaScript", "CSS"],
     desc: "Smooth vertical scrolling, autoplay and optimized video loading for a seamless short-video feed.",
   },
-  {
-    title: "HR Management System",
-    subtitle: "Employee, attendance & payroll management",
-    link: "https://github.com/prateekgb123/hr_management_system.git",
-    category: "Web Apps & AI",
-    kind: "app",
-    color: "#60A5FA",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
-    desc: "Manage employees, attendance, leave requests, payroll and departments with secure authentication and efficient APIs.",
-  },
-  {
-    title: "Real-Time Chat",
-    subtitle: "Instant messaging with Socket.IO",
-    link: "https://github.com/prateekgb123/REAL-TIME-CHAT-APPLICATION.git",
-    category: "Web Apps & AI",
-    kind: "ai",
-    color: "#22D3EE",
-    tech: ["React.js", "Node.js", "Socket.IO"],
-    desc: "Multi-user chat with live message updates and bidirectional communication over WebSockets.",
-  },
-  {
-    title: "Real-Time Collaboration Tool",
-    subtitle: "Multi-user live collaboration",
-    link: "https://github.com/prateekgb123/REAL-TIME-COLLABORATION-TOOL.git",
-    category: "Web Apps & AI",
-    kind: "app",
-    color: "#C084FC",
-    tech: ["React.js", "Node.js", "Socket.IO"],
-    desc: "Several users work together simultaneously with instant synchronization powered by WebSockets.",
-  },
-  {
-    title: "Weather App",
-    subtitle: "Live forecasts for any city",
-    link: "https://github.com/prateekgb123/WEATHER-APPLICATION.git",
-    category: "Web Apps & AI",
-    kind: "app",
-    color: "#FACC15",
-    tech: ["React.js", "OpenWeather API"],
-    desc: "Real-time temperature, humidity and wind speed with multi-city search in a clean, responsive interface.",
-  },
-  {
-    title: "Food Quality Website",
-    subtitle: "Food safety information portal",
-    link: "https://github.com/prateekgb123/Food-Quality-Website.git",
-    category: "Business Websites",
-    kind: "business",
-    color: "#4ADE80",
-    tech: ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"],
-    desc: "An informative site on food safety, quality standards and best practices, backed by a Node.js + MongoDB content system.",
-  },
-  {
-    title: "Productivity Tracker",
-    subtitle: "Chrome extension",
-    link: "https://github.com/prateekgb123/PRODUCTIVITY-TRACKER-CHROME-EXTENSION.git",
-    category: "Other",
-    kind: "app",
-    color: "#2DD4BF",
-    tech: ["JavaScript", "Chrome Extension API"],
-    desc: "Tracks browsing activity and daily tasks to help users stay focused, right inside the browser.",
-  },
-  {
-    title: "Customer Churn Prediction",
-    subtitle: "Machine learning model",
-    link: "https://github.com/prateekgb123/customer_churn_Prediction.git",
-    category: "Other",
-    kind: "app",
-    color: "#818CF8",
-    tech: ["Python", "Pandas", "Scikit-learn"],
-    desc: "Predicts customer churn from historical data, with visualizations that surface retention insights.",
-  },
-  {
-    title: "Facebook UI Clone",
-    subtitle: "Responsive UI build",
-    link: "https://github.com/prateekgb123/facebookclone_tailwindcss.git",
-    category: "Other",
-    kind: "app",
-    color: "#3B82F6",
-    tech: ["HTML", "Tailwind CSS", "JavaScript"],
-    desc: "A responsive recreation of a social feed UI — profiles, news feed and post interactions — built with Tailwind CSS.",
-  },
-  {
-    title: "GitHub UI Clone",
-    subtitle: "Responsive UI build",
-    link: "https://github.com/prateekgb123/github-clone.git",
-    category: "Other",
-    kind: "app",
-    color: "#94A3B8",
-    tech: ["HTML", "CSS", "JavaScript"],
-    desc: "A responsive recreation of a code-hosting UI with profiles, repositories and commit history views.",
-  },
 ];
 
 export const experience = [
+  {
+    title: "Junior AI Developer",
+    company: "Octopus Estates",
+    duration: "Nov 2026 – Present",
+    current: true,
+    desc: "Building AI-powered features and full-stack web applications for a real-estate business — from LLM integrations to the websites and tools the team uses every day.",
+    tech: ["AI / LLMs", "Python", "MERN Stack", "REST APIs"],
+  },
   {
     title: "Programmer Analyst Trainee",
     company: "Cognizant Technology Solutions",
