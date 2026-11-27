@@ -116,7 +116,7 @@ const Hero = () => (
         initial={{ opacity: 0, y: 24, rotate: -1 }}
         animate={{ opacity: 1, y: 0, rotate: 0 }}
         transition={{ duration: 0.8, delay: 0.1, ease }}
-        className="relative mx-auto w-full max-w-[440px] sm:px-6 lg:px-0"
+        className="relative mx-auto w-full max-w-[420px]"
       >
         <HeroVisual />
       </motion.div>

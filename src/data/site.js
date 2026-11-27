@@ -11,7 +11,7 @@ export const contact = {
   linkedin: "https://www.linkedin.com/in/prateek-g-ballari-90436330b/",
   github: "https://github.com/prateekgb123",
   leetcode: "https://leetcode.com/u/prateekgb123/",
-  cv: "https://drive.google.com/file/d/1QQcpSDTaPA4uRRrXVkw8su4cxu_S2Qv9/view?usp=drive_link",
+  cv: "https://drive.google.com/file/d/1iE170x8Rh0OHQaNqccK557q2dae4DNsI/view?usp=sharing",
 };
 
 export const whatsappLink = (text = "Hi Prateek, I'd like to discuss a website project.") =>
